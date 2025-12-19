@@ -1,0 +1,13 @@
+[project]
+name = "lab13"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "flask>=3.1.2",
+]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"

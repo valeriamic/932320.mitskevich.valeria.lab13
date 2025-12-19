@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block head %}
+<title>Home Page - Backend3</title>
+<link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/home.css') }}"
+/>
+{% endblock %} {% block content %}
+<h1>Mockups</h1>
+<div>
+    <ul>
+        <li><a href="/quiz">Quiz</a></li>
+        <li><a href="/results">Results</a></li>
+    </ul>
+</div>
+{% endblock %}

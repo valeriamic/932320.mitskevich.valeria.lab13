@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+
+{% block head %}
+    <title>Results - Backend3</title>
+{% endblock %} 
+
+{% block content %}
+    <h1>Result</h1>
+    
+    {% if error %}
+        <h3>{{ error }}</h3>
+    {% else %}
+        <h1>Quiz results</h1>
+        <h3>Right answers {{ right }} out {{ quiz|length }}</h3>
+        
+        {% for task in quiz %}
+            <div>
+                {{ loop.index }}. {{ task.task }} = {{ task.user_answer }}
+            </div>
+        {% endfor %} 
+    {% endif %} 
+{% endblock %}

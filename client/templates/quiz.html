@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block head %}
+<title>Calc - Backend3</title>
+<link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/quiz.css') }}"
+/>
+{% endblock %} {% block content %}
+<h1>Quiz</h1>
+<div>
+    <p>{{ task }} =</p>
+    <form action="" method="POST">
+        <div>
+            <input type="number" name="answer" required />
+        </div>
+        <div>
+            <input type="submit" name="action" value="next" />
+            <input type="submit" name="action" value="finish" />
+        </div>
+    </form>
+    <script defer>
+        document.querySelector("input[name='answer']").focus();
+    </script>
+</div>
+{% endblock %}
